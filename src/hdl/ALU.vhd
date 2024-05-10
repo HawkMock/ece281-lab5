@@ -110,8 +110,7 @@ begin
     alu_add_sub_inst : add_sub
     port map (  i_A => i_A,
                 i_B => i_B,
-                i_alu_ctrl(0) => i_op(0),
-                i_alu_ctrl(1) => i_op(2),
+                i_alu_ctrl => i_op(0),
                 o_result => w_sum,
                 o_carry => o_flags(1),
                 o_overflow => o_flags(0),

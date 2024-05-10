@@ -21,6 +21,7 @@
 --|
 --|    Documentation statement: Talked extensively with C3C Culp about the theory behind writing our ALUs. C/Culp helped me determine my equation for overflow.
 --|    Copy and pasted John Castello's shift statement from the Teams into my alu_ls and alu_rs.
+--|    Used ChatGPT extensively for Q&A and for limited code generation: https://chat.openai.com/share/af8eb33c-5f9d-4f52-84a6-0393642cc32c
 --+----------------------------------------------------------------------------
 library ieee;
   use ieee.std_logic_1164.all;
@@ -170,6 +171,11 @@ begin
     );
 	
 	-- CONCURRENT STATEMENTS ----------------------------
+	-- MUX --
+	w_bin <=   sw(7 downto 0) when w_cycle = "1000" else
+	           sw(7 downto 0) when w_cycle = "0100" else
+	           w_result when w_cycle = "0010" else x"00";
+	
 	-- LEDs --
 	led(3 downto 0) <= w_cycle;
 	led(11 downto 4) <= x"00";

@@ -44,24 +44,27 @@ begin
                         i_D = "1010" or
                         i_D = "0100" or
                         i_D = "1100") else '0';
-    o_S(1) <= '1' when (i_D = "0010" or
-                        i_D = "0110" or
-                        i_D = "1000" or
+    o_S(1) <= '1' when (i_D = "0110" or
+                        i_D = "1011" or
+                       (i_D = "0101") or
                         i_D = "1010" or
                         i_D = "1100" or
                         i_D = "1110") else '0';
-    o_S(2) <= '1' when (i_D = "0100" or
+    o_S(2) <= '1' when (i_D = "0010" or
                         i_D = "1100" or
+                        i_D = "1011" or
                         i_D = "1010" or
                         i_D = "1101") else '0';
     o_S(3) <= '1' when ( (i_D = "0001") or
-                         (i_D = "0100") or
                          (i_D = "0111") or
+                         (i_D = "0100") or
+                         i_D = "1011" or
                          (i_D = "1111") or
                          (i_D = "1001") or
                          (i_D = "1010") ) else '0';
     o_S(4) <= '1' when ( (i_D = "0001") or
                          (i_D = "0011") or
+                         i_D = "1011" or
                          (i_D = "0101") or
                          (i_D = "0100") or
                          (i_D = "0111") or
@@ -69,6 +72,7 @@ begin
                          (i_D = "1001") ) else '0';
     o_S(5) <= '1' when ( (i_D = "0001") or
                          (i_D = "0011") or
+                         i_D = "1011" or
                          i_D = "1010" or
                          (i_D = "0010") or
                          (i_D = "0111") or
@@ -76,6 +80,7 @@ begin
                          (i_D = "1101") ) else '0';
     o_S(6) <= '1' when ( (i_D = "0000") or
                          (i_D = "0001") or
+                         i_D = "1011" or
                          (i_D = "0111") ) else '0';
 
 
